@@ -1,0 +1,50 @@
+[
+  {
+    "method": "GET",
+    "path": "/api/v1/user_segment",
+    "queryStringParameters": { "user_id": "1" },
+    "statusCode": 200,
+    "body": "{\"segment\":\"p1\"}"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/user_segment",
+    "queryStringParameters": { "user_id": "2" },
+    "statusCode": 200,
+    "body": "{\"segment\":\"p2\"}"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/user_segment",
+    "queryStringParameters": { "user_id": "3" },
+    "statusCode": 200,
+    "body": "{\"segment\":\"p3\"}"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/offer",
+    "statusCode": 200,
+    "body": "{\"response_msg\":\"success\"}"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/cart/apply_offer",
+    "requestBody": "{\"cart_value\":200,\"user_id\":1,\"restaurant_id\":1}",
+    "statusCode": 200,
+    "body": "{\"cart_value\": 190}"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/cart/apply_offer",
+    "requestBody": "{\"cart_value\":400,\"user_id\":2,\"restaurant_id\":2}",
+    "statusCode": 200,
+    "body": "{\"cart_value\": 360}"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/cart/apply_offer",
+    "requestBody": "{\"cart_value\":300,\"user_id\":3,\"restaurant_id\":3}",
+    "statusCode": 200,
+    "body": "{\"cart_value\": 240}"
+  }
+]
